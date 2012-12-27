@@ -1,0 +1,4 @@
+res/LIVER1.txt
+res/LIVER2.txt
+7
+2
