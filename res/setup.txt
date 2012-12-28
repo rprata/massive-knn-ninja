@@ -1,4 +1,4 @@
-res/LIVER1.txt
-res/LIVER2.txt
+res/BREAST1.txt
+res/BREAST2.txt
 7
 2

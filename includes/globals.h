@@ -12,10 +12,13 @@
 static const char * SETUP = "res/setup.txt";
 static const char * SETUP_ACCESS_TYPE = "r";
 
-// Globals Variables
 char pTrainingFile[20];
 char pTestFile[20];
 int K;
 int numberOfClasses;
+
+int total;
+int error;
+float testClazz;
 
 #endif

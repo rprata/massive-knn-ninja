@@ -5,28 +5,13 @@
 int main (void)
 {
 
+//	printf("%d\n", 7/2);
+
 	if (!setup()) return 1;
 
-   	printf("%s\n", pTrainingFile);
-   	printf("%s\n", pTestFile);
-   	printf("%d\n", K);
-   	printf("%d\n", numberOfClasses);
-
-	descriptor = (Descriptor *) malloc(sizeof(Descriptor));
-
-	list = initializeList(descriptor);
-	if (descriptor->begin == NULL) printf("testeeee\n");
-	//if(!start()) return 1;
-
-	list = insertElement (list, descriptor, 4.0, 1);
-	if (descriptor->begin == NULL) printf("testeeee2\n");
-	list = insertElement (list, descriptor, 1.0, 1);
-
-	list = insertElement (list, descriptor, 3.0, 1);
-
-	list = insertElement (list, descriptor, 1.0, 1);
-
-	printList(list);
+	if(!start()) return 1;
+	
+	printf("The Total Hits in exam %s is: %.2f%%\n", pTestFile, ((float)(total - error)/total)*100);
 
 	return 0;
 }

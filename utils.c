@@ -55,8 +55,20 @@ float calculatesDistance (float elementsTest[], float elementsTraining[], int co
 }
 
 
-List * generateKNNList (List * list, float distance, int clazz)
+List * generateKNNList (List * list, Descriptor * descriptor, float distance, int clazz)
 {
+	if (descriptor->counter < K)
+	{
+		list = insertElement (list, descriptor, distance, clazz);
+	}
+	else
+	{
+		if (descriptor->begin->distance > distance)
+		{
+			list = removeLastElement (list, descriptor);
+			list = insertElement (list, descriptor, distance, clazz);
+		}
+	}
 
 	return list;
 }
@@ -64,13 +76,11 @@ List * generateKNNList (List * list, float distance, int clazz)
 int start()
 {
 	FILE * pFile;
-	char buffer[30];
+	char buffer[300];
 	char * pValue;
 
 	int counter = 0;
-	float fValue[20];
-
-	// list = initializeList(descriptor);
+	float fValue[100];
 
 	pFile =	fopen(pTestFile, SETUP_ACCESS_TYPE);
 
@@ -80,16 +90,30 @@ int start()
 		return ERROR;
 	}	
 
-	while (fgets(buffer, 30, pFile) != NULL)
+	while (fgets(buffer, 300, pFile) != NULL)
 	{
 		counter = 0;
-		pValue = strtok(buffer," ");
+		total++;
+
+		if (descriptor != NULL) free (descriptor);
+		descriptor = (Descriptor *) malloc(sizeof(Descriptor));
+
+		if (list != NULL) free (list);
+		list = initializeList(descriptor);
+
+		pValue = strtok(buffer, " ");
   		while (pValue != NULL)
   		{
-    		fValue[counter] = atof(pValue);
-    		counter++;
+  			if (pValue[0] != 13)
+  			{
+    			fValue[counter] = atof(pValue);
+    			counter++;
+    		}
     		pValue = strtok (NULL, " ");
   		}
+
+  		testClazz = fValue[counter - 1];
+
   		if(!compareFiles(fValue))
   		{
   			perror ("Error comparing files");
@@ -106,11 +130,11 @@ int start()
 int compareFiles(float elementsTest[])
 {
 	FILE * pFile;
-	char buffer[30];
+	char buffer[300];
 	char * pValue;
 
 	int counter = 0;
-	float fValue[20];
+	float fValue[40];
 
 	float distance;
 	int clazz;
@@ -123,21 +147,26 @@ int compareFiles(float elementsTest[])
 		return ERROR;
 	}	
 
-	while (fgets(buffer, 30, pFile) != NULL)
+	while (fgets(buffer, 300, pFile) != NULL)
 	{
 		counter = 0;
 		pValue = strtok(buffer," ");
   		while (pValue != NULL)
   		{
-    		fValue[counter] = atof(pValue);
-    		counter++;
+  			if (pValue[0] != 13)
+  			{
+    			fValue[counter] = atof(pValue);
+    			counter++;
+    		}
     		pValue = strtok (NULL, " ");
   		}
   		distance = calculatesDistance(elementsTest, fValue, counter);
   		clazz = (int) fValue[counter - 1];
-  		printf("%f\n", distance);
-//  		generateKNNList(list, distance, clazz);
+ 		list = generateKNNList(list, descriptor, distance, clazz);
 	}
+
+	if (getEstimatedClassError(list, testClazz))
+		error++;
 
 	fclose (pFile);
 
