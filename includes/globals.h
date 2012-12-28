@@ -12,6 +12,10 @@
 static const char * SETUP = "res/setup.txt";
 static const char * SETUP_ACCESS_TYPE = "r";
 
+static const char * ERROR_OPEN = "Error opening file";
+static const char * ERROR_COMPARE = "Error comparing files";
+static const char * MESSAGE_RESULT = "The total hits in exam %s is: %.2f%%\n";
+
 char pTrainingFile[20];
 char pTestFile[20];
 int K;

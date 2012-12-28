@@ -7,9 +7,9 @@ int main (void)
 
 	if (!setup()) return 1;
 
-	if(!start()) return 1;
+	if (!start()) return 1;
 	
-	printf("The total hits in exam %s is: %.2f%%\n", pTestFile, ((float)(total - error)/total)*100);
+	printf (MESSAGE_RESULT, pTestFile, ((float)(total - error)/total)*100);
 
 	return 0;
 }

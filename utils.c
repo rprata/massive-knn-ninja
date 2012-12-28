@@ -11,7 +11,7 @@ int setup()
 
 	if (!pFile)
 	{
-		perror ("Error opening file");
+		perror (ERROR_OPEN);
 		return ERROR;
 	}
 
@@ -86,7 +86,7 @@ int start()
 
 	if (!pFile)
 	{
-		perror ("Error opening file");
+		perror (ERROR_OPEN);
 		return ERROR;
 	}	
 
@@ -116,7 +116,7 @@ int start()
 
   		if(!compareFiles(fValue))
   		{
-  			perror ("Error comparing files");
+  			perror (ERROR_COMPARE);
   			return ERROR;
   		}
 	}
@@ -143,7 +143,7 @@ int compareFiles(float elementsTest[])
 
 	if (!pFile)
 	{
-		perror ("Error opening file");
+		perror (ERROR_OPEN);
 		return ERROR;
 	}	
 
