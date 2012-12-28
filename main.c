@@ -9,7 +9,7 @@ int main (void)
 
 	if(!start()) return 1;
 	
-	printf("The Total Hits in exam %s is: %.2f%%\n", pTestFile, ((float)(total - error)/total)*100);
+	printf("The total hits in exam %s is: %.2f%%\n", pTestFile, ((float)(total - error)/total)*100);
 
 	return 0;
 }
