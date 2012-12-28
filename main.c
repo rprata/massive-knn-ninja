@@ -5,8 +5,6 @@
 int main (void)
 {
 
-//	printf("%d\n", 7/2);
-
 	if (!setup()) return 1;
 
 	if(!start()) return 1;
