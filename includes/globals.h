@@ -9,7 +9,7 @@
 #define SUCCESS 1
 #define ERROR 0
 
-static const char * SETUP = "res/setup.txt";
+static const char * SETUP = "setup.txt";
 static const char * SETUP_ACCESS_TYPE = "r";
 
 static const char * ERROR_OPEN = "Error opening file";

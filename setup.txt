@@ -1,4 +1,4 @@
-Dados/EEG1.txt
-Dados/EEG2.txt
+Dados/C-HEART1.txt
+Dados/C-HEART2.txt
 7
 2
