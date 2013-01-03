@@ -1,0 +1,4 @@
+Dados/EEG1.txt
+Dados/EEG2.txt
+7
+2

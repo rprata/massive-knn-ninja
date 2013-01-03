@@ -1,4 +1,0 @@
-res/BREAST1.txt
-res/BREAST2.txt
-7
-2

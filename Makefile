@@ -2,7 +2,7 @@ CC = gcc
 BIN = bin/main
 INCLUDES = -I./includes
 LIBS = -lm
-SOURCE = main.c utils.c list.c
+SOURCE = main.c core.c list.c
 
 MKDIR_P = mkdir -p bin/
 RM_RF = rm -rf bin/

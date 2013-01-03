@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "includes/utils.h"
+#include "includes/core.h"
 
 int main (void)
 {
