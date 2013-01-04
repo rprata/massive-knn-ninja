@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Massive-KNN-Ninja" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Massive-KNN-Ninja" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="includes" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Massive-KNN-Ninja" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename=".gitignore" />
+		<Unit filename="Dados.rtf" />
+		<Unit filename="Dados/BREAST1.txt" />
+		<Unit filename="Dados/BREAST2.txt" />
+		<Unit filename="Dados/C-HEART1.txt" />
+		<Unit filename="Dados/C-HEART2.txt" />
+		<Unit filename="Dados/EEG1.txt" />
+		<Unit filename="Dados/EEG2.txt" />
+		<Unit filename="Dados/LIVER1.txt" />
+		<Unit filename="Dados/LIVER2.txt" />
+		<Unit filename="Dados/PIMA1.txt" />
+		<Unit filename="Dados/PIMA2.txt" />
+		<Unit filename="Dados/TIROID1.txt" />
+		<Unit filename="Dados/TIROID2.txt" />
+		<Unit filename="Dados/VIDRO1.txt" />
+		<Unit filename="Dados/VIDRO2.txt" />
+		<Unit filename="Dados/WINE1.txt" />
+		<Unit filename="Dados/WINE2.txt" />
+		<Unit filename="Makefile" />
+		<Unit filename="core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="includes/core.h" />
+		<Unit filename="includes/globals.h" />
+		<Unit filename="includes/list.h" />
+		<Unit filename="list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="setup.txt" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

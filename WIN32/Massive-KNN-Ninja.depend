@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1357265342 source:c:\users\rprata\codes\massive-knn-ninja\core.c
+	"includes\core.h"
+
+1357265380 source:c:\users\rprata\codes\massive-knn-ninja\list.c
+	"includes\list.h"
+
+1357263543 source:c:\users\rprata\codes\massive-knn-ninja\main.c
+	<stdio.h>
+	<stdlib.h>
+	"includes\core.h"
+
+1357265959 c:\users\rprata\codes\massive-knn-ninja\includes\core.h
+	"globals.h"
+	"list.h"
+
+1357265929 c:\users\rprata\codes\massive-knn-ninja\includes\globals.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
+1357236020 c:\users\rprata\codes\massive-knn-ninja\includes\list.h
+	"globals.h"
+

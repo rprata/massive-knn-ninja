@@ -1,1 +1,3 @@
-bin/main
+LINUX/bin/main
+WIN32/obj/
+WIN32/bin/
