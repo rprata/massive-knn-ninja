@@ -1,4 +1,0 @@
-Dados\C-HEART1.txt
-Dados\C-HEART2.txt
-7
-2
