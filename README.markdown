@@ -1,10 +1,10 @@
-MASSIVE-KNN-NINJA: A Simple List Implementation
+MASSIVE-KNN-NINJA
 =======================================
 
 What is it?
 -----------
 
-It's my first data structure lesson. This class is lected by Flavio in UERJ. This software works in Linux and Windows platform.
+A optimized KNN algorithm implemented in C lenguage supported in in Linux and Windows.
 
 
 How does it work?
