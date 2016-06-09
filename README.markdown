@@ -4,7 +4,7 @@ MASSIVE-KNN-NINJA
 What is it?
 -----------
 
-A optimized KNN algorithm implemented in C lenguage supported in in Linux and Windows.
+A KNN algorithm implemented in C lenguage supported in Linux and Windows.
 
 
 How does it work?
