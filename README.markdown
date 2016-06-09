@@ -1,11 +1,6 @@
 MASSIVE-KNN-NINJA
 =======================================
-
-What is it?
------------
-
 A KNN algorithm implemented in C language supported in Linux and Windows.
-
 
 How does it work?
 -----------------
